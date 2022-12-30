@@ -45,7 +45,7 @@ Route::post('/register', [\App\Http\Controllers\RegisterController::class, 'stor
 
 // Route::view('/', 'home')->name('home');
 
-Route::post('/logout', function () {
+Route::get('/logout', function () {
     auth()->logout();
     request()->session()->invalidate();
     request()->session()->regenerateToken();
@@ -62,13 +62,13 @@ Route::post('/register', [\App\Http\Controllers\RegisterController::class, 'stor
 Route::get('/login', [\App\Http\Controllers\LoginController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/login', [\App\Http\Controllers\LoginController::class, 'authenticate'])->name('login')->middleware('guest');
 
-Route::post('/logout', function () {
-    auth()->logout();
-    request()->session()->invalidate();
-    request()->session()->regenerateToken();
+// Route::post('/logout', function () {
+//     auth()->logout();
+//     request()->session()->invalidate();
+//     request()->session()->regenerateToken();
 
-    return redirect('/home');
-})->name('logout')->middleware('auth');
+//     return redirect('/home');
+// })->name('logout')->middleware('auth');
 
 // Route::view('/home', 'home')->name('home')->middleware('auth');
 
