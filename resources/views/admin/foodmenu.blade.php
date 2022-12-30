@@ -9,8 +9,6 @@
 
     <!-- ALPINE JS -->
 
-    
-
     <title>Admin Coffea</title>
 </head>
 <body class="antialiased bg-gray-100">
@@ -71,7 +69,6 @@
 
                         <div>
 
-
                         <table bgcolor="red">
 
                             <tr>
@@ -100,9 +97,7 @@
 
                         </table>
 
-
                         </div>
-
 
                 </div>
                 

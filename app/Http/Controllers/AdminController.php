@@ -7,7 +7,10 @@ use Illuminate\Http\Request;
 use App\Models\User;
 
 use App\Models\Food;
+
 use Illuminate\Support\Facades\Storage;
+
+use App\Models\Critic;
 
 
 class AdminController extends Controller
@@ -92,6 +95,30 @@ class AdminController extends Controller
 
         return redirect()->back();
 
+    }
+
+     public function critic(Request $request)
+    {
+        
+        $data = new critic;
+
+        $data->name=$request->name;
+
+        $data->email=$request->email;
+
+        $data->message=$request->message;
+
+        $data->save();
+
+        return redirect()->back();
+
+    }
+
+    public function viewcritic()
+    {
+        $data = Critic::query()->get();
+
+        return view("admin.admincritic",compact("data"));
     }
 
 }

@@ -18,6 +18,10 @@ use App\Http\Controllers\AdminController;
 //     return view('welcome');
 // });
 
+Route::get("/viewcritic",[AdminController::class, "viewcritic"]);
+
+Route::post("/critic",[AdminController::class, "critic"]);
+
 Route::post("/update/{id}",[AdminController::class, "update"]);
 
 Route::get("/updateview/{id}",[AdminController::class, "updateview"])->name("updateview");
@@ -36,7 +40,6 @@ Route::get("/users",[AdminController::class, "user"]);
 Route::get("home", [HomeController::class, "index"]);
 
 Route::get("/redirects", [HomeController::class,"redirects"]);
-
 
 //practice route Auth
 Route::get('/register', [\App\Http\Controllers\RegisterController::class, 'create'])->name('register');

@@ -35,28 +35,28 @@
             @include("admin.navbar")
         </main>
         
-
+    
             <div style="position: relative; top: 60px; right: 333px">
-
+    
                     <form action="{{url('/update',$data->id)}}" method="post" enctype="multipart/form-data">
-
+    
                     @csrf
-
+    
                         <div>
                             <label for="">Title</label>
                             <input type="text" name="title" value="{{$data->title}}" required>
                         </div>
-
+    
                          <div>
                             <label for="">Price</label>
                             <input type="num" name="price" value="{{$data->price}}" required>
                         </div>
-
+    
                          <div>
                             <label for="">Description</label>
                             <input type="text" name="description" value="{{$data->description}}" required>
                         </div>
-
+    
                         
                           <div>
                             <label for="">Old Image</label>
@@ -67,21 +67,21 @@
                             <label for="">New Image</label>
                             <input type="file" name="image" required>
                         </div> 
-
+    
                          <div>
                             <input style="color: black" type="Submit" value="Save">
                         </div>
-
+    
                     </form>
-
+    
                     <br>
-
+    
                         <div>
-
-
-
+    
+    
+    
         @include("admin.adminscript")
-    </div>
+        </div>
 
 </body>
 </html>

@@ -44,7 +44,7 @@
                                 <a href="{{url('/foodmenu')}}" class="block py-2 px-4 hover:bg-gray-800 hover:text-white rounded">
                                     FoodMenu
                                 </a>
-                                <a href="#" class="block py-2 px-4 hover:bg-gray-800 hover:text-white rounded">
+                                <a href="{{url('/viewcritic')}}" class="block py-2 px-4 hover:bg-gray-800 hover:text-white rounded">
                                     critic
                                 </a>
                             </div>
