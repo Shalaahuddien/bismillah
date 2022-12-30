@@ -41,6 +41,22 @@
                     <li class="inline-block mb-4 mx-4"><a href="#contact" class="tm-text-gold py-1 md:py-3 px-4">Contact</a>
                     </li>
 
+                    <li class="scroll-to-section" style="background-color: red;"><a href="">
+                        
+                    @auth
+
+                    Cart{{$count}}
+                
+                    @endauth
+
+                    @guest
+
+                        Cart[0]
+
+                    @endguest
+
+                    </a></li>
+
                  <li>
 
                 @if (Route::has('login'))
@@ -140,6 +156,7 @@
                         Praesent tellus magna, consectetur sit amet volutpat eu, pulvinar vitae sem.
                         Sed ultrices. bg white 80% alpha. btn #066    
                     </p>
+
                     
                     <p class="mb-10 text-lg">
                         <span class="block mb-2">Tel: <a href="tel:0100200340" class="hover:text-yellow-600 transition">010-020-0340</a></span>

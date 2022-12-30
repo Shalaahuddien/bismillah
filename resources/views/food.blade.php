@@ -9,6 +9,10 @@
 
             @foreach($data as $data)
 
+            <form action="{{url('addcart', $data->id)}}" method="post">
+
+            @csrf
+
             <div class="flex flex-col lg:flex-row justify-around items-center">
                 <div class="flex-1 m-5 rounded-xl px-4 py-6 sm:px-8 sm:py-10 tm-bg-brown tm-item-container">
                     <div class="flex items-start mb-6 tm-menu-item">
@@ -17,8 +21,15 @@
                             <h3 class="title">{{$data->title}}</h3>
                             <p class="description">{{$data->description}}</p>
                             <div class="price">{{$data->price}}</div>
-                        </div>                    
+                        </div> 
+                        
+                        <input type="number" name="quantity" min="1" value="1" style="width: 80px;">
+                        <input type="submit" value="add cart">
+
+
                     </div>
+
+                    </form>
                                                             
                     @endforeach
 

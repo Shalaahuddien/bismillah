@@ -18,6 +18,8 @@ use App\Http\Controllers\AdminController;
 //     return view('welcome');
 // });
 
+Route::post("/addcart/{id}",[HomeController::class, "addcart"]);
+
 Route::get("/viewcritic",[AdminController::class, "viewcritic"]);
 
 Route::post("/critic",[AdminController::class, "critic"]);
