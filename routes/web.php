@@ -18,9 +18,9 @@ use App\Http\Controllers\AdminController;
 //     return view('welcome');
 // });
 
+Route::post("/update/{id}",[AdminController::class, "update"]);
 
-
-
+Route::get("/updateview/{id}",[AdminController::class, "updateview"])->name("updateview");
 
 Route::get("/deletemenu/{id}",[AdminController::class, "deletemenu"])->name("deletemenu");
 
@@ -46,7 +46,7 @@ Route::post('/register', [\App\Http\Controllers\RegisterController::class, 'stor
 
 // Route::view('/', 'home')->name('home');
 
-Route::get('/logout', function () {
+Route::post('/logout', function () {
     auth()->logout();
     request()->session()->invalidate();
     request()->session()->regenerateToken();
@@ -68,7 +68,7 @@ Route::post('/logout', function () {
     request()->session()->invalidate();
     request()->session()->regenerateToken();
 
-    return redirect('/');
+    return redirect('/home');
 })->name('logout')->middleware('auth');
 
 // Route::view('/home', 'home')->name('home')->middleware('auth');

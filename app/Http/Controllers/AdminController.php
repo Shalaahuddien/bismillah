@@ -42,6 +42,13 @@ class AdminController extends Controller
         return view("admin.foodmenu",compact("data"));
     }
 
+    public function updateview($id)
+    {
+        $data = food::find($id);
+
+        return view("admin.updateview",compact("data"));
+    }
+
       public function upload(Request $request)
     {
         
@@ -54,6 +61,24 @@ class AdminController extends Controller
         // $request->image->move('foodimage',$image);
 
         // $data->image=$imagename;
+
+        $data->image = $request->file('image')->store('foodimage', 'public');
+
+        $data->title=$request->title;
+
+        $data->price=$request->price;
+
+        $data->description=$request->description;
+
+        $data->save();
+
+        return redirect()->back();
+
+    }
+
+    public function update(Request $request,$id)
+    {
+        $data = food::find($id);
 
         $data->image = $request->file('image')->store('foodimage', 'public');
 

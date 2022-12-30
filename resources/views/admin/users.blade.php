@@ -6,26 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- TAILWIND CSS -->
 
-   
-
     @include("admin.admincss")
 
     <!-- ALPINE JS -->
-
-    
 
     <title>Admin Coffea</title>
 </head>
 <body class="antialiased bg-gray-100">
     <div class="flex relative" x-data="{navOpen: false}">
 
-   
         <!-- NAV -->
         <!-- END OF NAV -->
 
         <!-- PAGE CONTENT -->
         <main class="flex-1 h-screen overflow-y-scroll overflow-x-hidden">
-
 
             <div class="md:hidden justify-between items-center bg-black text-white flex">
                 <h1 class="text-2xl font-bold px-4">Better Code</h1>
@@ -41,7 +35,6 @@
          @include("admin.adminscript")
 
         <div style="position: relative; top: 60px; right: 333px;">
-
 
             <table bgcolor="grey" border="3px">
 
@@ -68,7 +61,6 @@
                     @endforeach
 
             </table>
-
 
         </div>
 

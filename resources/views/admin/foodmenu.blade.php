@@ -79,7 +79,8 @@
                                     <th style="padding: 30px">Price</th>                
                                     <th style="padding: 30px">Description</th>
                                     <th style="padding: 30px">Image</th> 
-                                    <th style="padding: 30px">Action</th>    
+                                    <th style="padding: 30px">Action</th>
+                                    <th style="padding: 30px">Action2</th>    
                                 </tr>
 
                                 @foreach($data as $data)
@@ -90,6 +91,8 @@
                                     <td><img height="200" width="200" src="{{Storage::url($data->image)}}" alt=""></td>
 
                                     <td href=""><a href="{{route('deletemenu',$data->id)}}">Delete</a></td>
+
+                                    <td href=""><a href="{{route('updateview',$data->id)}}">Update</a></td>
 
                                 </tr>
 
