@@ -33,10 +33,9 @@ Route::get("/deleteuser/{id}",[AdminController::class, "deleteuser"]);
 Route::get("/users",[AdminController::class, "user"]);
 
 // practice route views
-Route::get("/home",[HomeController::class, "index"]);
+Route::get("home", [HomeController::class, "index"]);
 
-Route::get("/redirects",[HomeController::class,"redirects"]);
-
+Route::get("/redirects", [HomeController::class,"redirects"]);
 
 
 //practice route Auth

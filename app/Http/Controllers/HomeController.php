@@ -18,6 +18,8 @@ class HomeController extends Controller
 
     $data=food::all();
 
+    // dd($data);
+
     return view("home",compact("data"));
    }
 
