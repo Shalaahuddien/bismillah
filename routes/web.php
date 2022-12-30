@@ -18,6 +18,16 @@ use App\Http\Controllers\AdminController;
 //     return view('welcome');
 // });
 
+
+
+
+
+Route::get("/deletemenu/{id}",[AdminController::class, "deletemenu"])->name("deletemenu");
+
+Route::post("/uploadfood",[AdminController::class, "upload"]);
+
+Route::get("/foodmenu",[AdminController::class, "foodmenu"]);
+
 Route::get("/deleteuser/{id}",[AdminController::class, "deleteuser"]);
 
 Route::get("/users",[AdminController::class, "user"]);

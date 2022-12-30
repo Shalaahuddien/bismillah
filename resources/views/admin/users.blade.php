@@ -34,16 +34,11 @@
                 </button>
             </div>
 
-            
-         
-
-           
         </main>
 
         <div>
 
          @include("admin.adminscript")
-
 
         <div style="position: relative; top: 60px; right: 333px;">
 
@@ -56,12 +51,10 @@
                         <th style="padding: 30px">Action</th>
                     </tr>
 
-
                     @foreach($data as $data)
                     <tr align="center">
                         <td>{{$data->name}}</td>
                         <td>{{$data->email}}</td>
-
 
                         @if($data->usertype=="0")
                         <td><a href="{{url('/deleteuser', $data->id)}}">delete</a></td>
@@ -70,7 +63,6 @@
 
                         @endif
 
-                        
                     </tr>
 
                     @endforeach
