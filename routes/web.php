@@ -18,6 +18,16 @@ use App\Http\Controllers\AdminController;
 //     return view('welcome');
 // });
 
+Route::get("/search",[AdminController::class, "search"]);
+
+Route::get("/orders",[AdminController::class, "orders"]);
+
+Route::post("/orderconfirm",[HomeController::class, "orderconfirm"]);
+
+Route::get("/remove/{id}",[HomeController::class, "remove"]);
+
+Route::get("/showcart/{id}",[HomeController::class, "showcart"]);
+
 Route::post("/addcart/{id}",[HomeController::class, "addcart"]);
 
 Route::get("/viewcritic",[AdminController::class, "viewcritic"]);

@@ -11,9 +11,53 @@
 <body>
 <div>
 
+    * {
+  font-family: "Inter", sans-serif;
+}
+form {
+  width: 40%;
+  min-width: 450px;
+  margin: auto;
+}
+label {
+  font-size: 1.5em;
+}
+
+input {
+  width: 100%;
+  display: block;
+  font-size: 2em;
+  border: solid 4px;
+  border-color: hsl(210, 100%, 30%);
+  margin-bottom: 1.5em;
+}
+input[type="submit"] {
+  width: fit-content;
+  font-size: 1.5em;
+}
+
+input[type="submit"]:focus {
+  background-color: hsl(210, 100%, 80%);
+}
+input[type="submit"]:active {
+  background-color: hsl(200, 100%, 80%);
+}
+.invalid {
+  border-color: darkred;
+  background-color: hsl(0, 30%, 95%);
+  margin-bottom: 0em;
+}
+.error-message {
+  margin-bottom: 1em;
+  color: hsl(0deg, 100%, 15%);
+}
+
+
         <form method="post" action="" x-data="form" @focusout="change" @input="change" @submit="submit">
             <h1>Register</h1>
+
             @csrf
+
             <div>
             <label for="username" class="form-label">Username</label>
             <input class="form-control" placeholder="Your name" name="name" id="name" type="text" x-bind:class="{'invalid':username.errorMessage}"
